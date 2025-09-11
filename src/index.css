@@ -2,41 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* RAG Bot Design System - локальный чат с русской типографикой */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Основная палитра */
+    --background: 245 247 250; /* #F5F7FA */
+    --foreground: 17 24 39; /* #111827 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 255 255 255;
+    --card-foreground: 17 24 39;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 255 255 255;
+    --popover-foreground: 17 24 39;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Акценты для бота */
+    --primary: 79 70 229; /* #4F46E5 - индиго для кнопок */
+    --primary-foreground: 255 255 255;
+    --primary-hover: 67 56 202; /* #4338CA */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 241 245 249; /* #F1F5F9 */
+    --secondary-foreground: 51 65 85; /* #334155 */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 248 250 252; /* #F8FAFC */
+    --muted-foreground: 107 114 128; /* #6B7280 */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 239 246 255; /* #EFF6FF - голубоватый для выделений */
+    --accent-foreground: 30 58 138; /* #1E3A8A */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Семантические цвета */
+    --destructive: 239 68 68; /* #EF4444 */
+    --destructive-foreground: 255 255 255;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --success: 34 197 94; /* #22C55E */
+    --success-foreground: 255 255 255;
 
-    --radius: 0.5rem;
+    --warning: 245 158 11; /* #F59E0B */
+    --warning-foreground: 255 255 255;
+
+    /* Границы и инпуты */
+    --border: 226 232 240; /* #E2E8F0 */
+    --input: 241 245 249; /* #F1F5F9 */
+    --ring: 79 70 229; /* #4F46E5 */
+
+    /* Чат специфичные цвета */
+    --chat-user: 239 246 255; /* #EFF6FF - сообщения пользователя */
+    --chat-bot: 255 255 255; /* белый фон для ответов бота */
+    --chat-system: 254 252 232; /* #FEFCE8 - системные сообщения */
+
+    /* Источники и цитаты */
+    --source-highlight: 254 249 195; /* #FEF9C3 - выделение цитат */
+    --source-border: 217 119 6; /* #D97706 */
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,33 +74,51 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Тёмная тема для бота */
+    --background: 11 15 26; /* #0B0F1A */
+    --foreground: 229 231 235; /* #E5E7EB */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 17 24 39; /* #111827 */
+    --card-foreground: 229 231 235;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 17 24 39;
+    --popover-foreground: 229 231 235;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 99 102 241; /* #6366F1 - светлее для тёмной темы */
+    --primary-foreground: 255 255 255;
+    --primary-hover: 79 70 229;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 30 41 59; /* #1E293B */
+    --secondary-foreground: 203 213 225; /* #CBD5E1 */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 24 33 47; /* #18212F */
+    --muted-foreground: 156 163 175; /* #9CA3AF */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 30 41 59; /* #1E293B */
+    --accent-foreground: 147 197 253; /* #93C5FD */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Семантические цвета для тёмной темы */
+    --destructive: 220 38 38; /* #DC2626 */
+    --destructive-foreground: 254 242 242;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --success: 21 128 61; /* #15803D */
+    --success-foreground: 240 253 244;
+
+    --warning: 217 119 6; /* #D97706 */
+    --warning-foreground: 255 251 235;
+
+    --border: 39 53 71; /* #274357 */
+    --input: 30 41 59; /* #1E293B */
+    --ring: 99 102 241;
+
+    /* Чат цвета для тёмной темы */
+    --chat-user: 30 58 138; /* #1E3A8A - темно-синий */
+    --chat-bot: 24 33 47; /* #18212F - тёмно-серый */
+    --chat-system: 69 26 3; /* #451A03 - тёмно-коричневый */
+
+    /* Источники для тёмной темы */
+    --source-highlight: 92 53 8; /* #5C3508 */
+    --source-border: 245 158 11;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
