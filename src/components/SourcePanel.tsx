@@ -53,7 +53,7 @@ export function SourcePanel() {
                   <div className="flex-1">
                     <h4 className="font-medium">{source.title}</h4>
                     <div className="mt-1 flex items-center gap-2">
-                      <Badge variant="outline" className="text-xs">
+                      <Badge variant="copper-outline" className="text-xs">
                         {source.space}
                       </Badge>
                       {source.anchor && (

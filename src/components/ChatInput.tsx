@@ -134,6 +134,7 @@ export function ChatInput({ onSubmit, onClarificationSelect }: ChatInputProps) {
             onClick={handleSubmit}
             disabled={!query.trim() || isLoading}
             className="absolute bottom-3 right-3 h-8 w-8 p-0"
+            variant="copper"
           >
             {isLoading ? (
               <Loader2 className="h-4 w-4 animate-spin" />

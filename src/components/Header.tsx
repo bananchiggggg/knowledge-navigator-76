@@ -99,8 +99,8 @@ export function Header() {
           </Select>
           
           <Badge 
-            variant="secondary"
-            className={`${envIndicator.bgColor} ${envIndicator.color} border-0`}
+            variant="copper"
+            className="text-xs font-medium"
           >
             {envIndicator.label}
           </Badge>
@@ -116,7 +116,7 @@ export function Header() {
           {/* Админская панель */}
           {userRole === 'admin' && (
             <Button
-              variant="ghost"
+              variant="copper-ghost"
               size="sm"
               onClick={() => setShowAdminPanel(!showAdminPanel)}
               className="flex items-center gap-2"
@@ -173,9 +173,10 @@ export function Header() {
                 </div>
                 <Button 
                   size="sm" 
-                  variant="outline"
+                  variant="copper-outline"
                   onClick={() => handleReindex(space.key)}
                   disabled={reindexingSpaces.has(space.key)}
+                  className="min-w-[140px]"
                 >
                   {reindexingSpaces.has(space.key) ? 'В очереди...' : 'Переиндексировать'}
                 </Button>

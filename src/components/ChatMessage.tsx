@@ -126,7 +126,7 @@ export function ChatMessage({ message, onEscalate }: ChatMessageProps) {
             <div className="flex items-center gap-2">
               {message.answer && (
                 <>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="copper-outline" className="text-xs">
                     {Math.round(message.answer.confidence * 100)}% уверенность
                   </Badge>
                   <Badge variant="secondary" className="text-xs">
@@ -195,7 +195,7 @@ export function ChatMessage({ message, onEscalate }: ChatMessageProps) {
           <div className="flex flex-wrap gap-2 pt-2">
             <Button
               size="sm"
-              variant="outline"
+              variant="copper"
               onClick={handleCopyChecklist}
               className="flex items-center gap-2"
             >
@@ -205,7 +205,7 @@ export function ChatMessage({ message, onEscalate }: ChatMessageProps) {
 
             <Button
               size="sm"
-              variant="outline"
+              variant="copper-outline"
               onClick={handleEscalate}
               className="flex items-center gap-2"
             >

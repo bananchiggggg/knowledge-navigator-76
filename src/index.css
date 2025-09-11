@@ -6,127 +6,130 @@
 
 @layer base {
   :root {
-    /* Основная палитра */
-    --background: 245 247 250; /* #F5F7FA */
-    --foreground: 17 24 39; /* #111827 */
+    /* Светлая тема с медными акцентами */
+    
+    /* Основные цвета - слоновая кость и теплые тона */
+    --background: 48 12% 98%; /* #FEFAF7 - слоновая кость */
+    --foreground: 30 15% 15%; /* #28211C - темно-коричневый */
 
-    --card: 255 255 255;
-    --card-foreground: 17 24 39;
+    --card: 0 0% 100%; /* #FFFFFF - чистый белый */
+    --card-foreground: 30 15% 15%;
 
-    --popover: 255 255 255;
-    --popover-foreground: 17 24 39;
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 15% 15%;
 
-    /* Акценты для бота */
-    --primary: 79 70 229; /* #4F46E5 - индиго для кнопок */
-    --primary-foreground: 255 255 255;
-    --primary-hover: 67 56 202; /* #4338CA */
+    /* Медные акценты - основная палитра */
+    --primary: 25 85% 45%; /* #C4622D - медь */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 20 90% 35%; /* #B85420 - темнее медь */
 
-    --secondary: 241 245 249; /* #F1F5F9 */
-    --secondary-foreground: 51 65 85; /* #334155 */
+    /* Вторичные цвета - теплые бежевые */
+    --secondary: 40 25% 92%; /* #F5F1EB - теплый бежевый */
+    --secondary-foreground: 25 40% 25%; /* #5C4A3A - коричневый */
 
-    --muted: 248 250 252; /* #F8FAFC */
-    --muted-foreground: 107 114 128; /* #6B7280 */
+    --muted: 45 20% 95%; /* #F8F6F3 - очень светлый бежевый */
+    --muted-foreground: 30 15% 45%; /* #7A6B60 - приглушенный коричневый */
 
-    --accent: 239 246 255; /* #EFF6FF - голубоватый для выделений */
-    --accent-foreground: 30 58 138; /* #1E3A8A */
+    --accent: 30 50% 88%; /* #E8D5C4 - светлая медь */
+    --accent-foreground: 20 60% 25%; /* #664225 - темная медь */
 
     /* Семантические цвета */
-    --destructive: 239 68 68; /* #EF4444 */
-    --destructive-foreground: 255 255 255;
+    --destructive: 0 75% 55%; /* #E53E3E - красный */
+    --destructive-foreground: 0 0% 100%;
 
-    --success: 34 197 94; /* #22C55E */
-    --success-foreground: 255 255 255;
+    --success: 120 60% 40%; /* #28A745 - зеленый */
+    --success-foreground: 0 0% 100%;
 
-    --warning: 245 158 11; /* #F59E0B */
-    --warning-foreground: 255 255 255;
+    --warning: 35 95% 50%; /* #FF8C00 - оранжевый */
+    --warning-foreground: 0 0% 100%;
 
     /* Границы и инпуты */
-    --border: 226 232 240; /* #E2E8F0 */
-    --input: 241 245 249; /* #F1F5F9 */
-    --ring: 79 70 229; /* #4F46E5 */
+    --border: 25 20% 85%; /* #DDD0C4 - медно-бежевый */
+    --input: 40 25% 95%; /* #F7F4F0 - очень светлый бежевый */
+    --ring: 25 85% 45%; /* Медная обводка фокуса */
 
-    /* Чат специфичные цвета */
-    --chat-user: 239 246 255; /* #EFF6FF - сообщения пользователя */
-    --chat-bot: 255 255 255; /* белый фон для ответов бота */
-    --chat-system: 254 252 232; /* #FEFCE8 - системные сообщения */
+    /* Чат цвета с медными акцентами */
+    --chat-user: 30 40% 90%; /* #E6D7CC - светло-медный для сообщений пользователя */
+    --chat-bot: 0 0% 100%; /* Белый для ответов бота */
+    --chat-system: 45 60% 92%; /* #F0EBDF - теплый кремовый */
 
     /* Источники и цитаты */
-    --source-highlight: 254 249 195; /* #FEF9C3 - выделение цитат */
-    --source-border: 217 119 6; /* #D97706 */
+    --source-highlight: 35 70% 88%; /* #F2D8B8 - светлая медь для выделений */
+    --source-border: 25 85% 45%; /* Медная граница */
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar для светлой темы */
+    --sidebar-background: 48 12% 98%;
+    --sidebar-foreground: 30 15% 15%;
+    --sidebar-primary: 25 85% 45%; /* Медный акцент */
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 40 25% 92%;
+    --sidebar-accent-foreground: 25 40% 25%;
+    --sidebar-border: 25 20% 85%;
+    --sidebar-ring: 25 85% 45%;
   }
 
   .dark {
-    /* Тёмная тема для бота */
-    --background: 11 15 26; /* #0B0F1A */
-    --foreground: 229 231 235; /* #E5E7EB */
+    /* Темная тема с медными акцентами */
+    
+    /* Основные цвета - графитовые и черные */
+    --background: 220 15% 8%; /* #12151A - темно-графитовый */
+    --foreground: 40 20% 92%; /* #EAEAEA - теплый белый */
 
-    --card: 17 24 39; /* #111827 */
-    --card-foreground: 229 231 235;
+    --card: 220 20% 12%; /* #1A1E26 - темно-серый с синим оттенком */
+    --card-foreground: 40 20% 92%;
 
-    --popover: 17 24 39;
-    --popover-foreground: 229 231 235;
+    --popover: 220 20% 12%;
+    --popover-foreground: 40 20% 92%;
 
-    --primary: 99 102 241; /* #6366F1 - светлее для тёмной темы */
-    --primary-foreground: 255 255 255;
-    --primary-hover: 79 70 229;
+    /* Медные акценты для темной темы - более яркие */
+    --primary: 25 80% 60%; /* #D2764D - яркая медь */
+    --primary-foreground: 220 15% 8%;
+    --primary-hover: 25 85% 70%; /* #E5916F - светлее медь при ховере */
 
-    --secondary: 30 41 59; /* #1E293B */
-    --secondary-foreground: 203 213 225; /* #CBD5E1 */
+    /* Вторичные цвета */
+    --secondary: 220 15% 18%; /* #282D36 - темно-серый */
+    --secondary-foreground: 30 30% 80%; /* #C7BDB3 - теплый серый */
 
-    --muted: 24 33 47; /* #18212F */
-    --muted-foreground: 156 163 175; /* #9CA3AF */
+    --muted: 220 15% 15%; /* #20252B - очень темный серый */
+    --muted-foreground: 30 15% 65%; /* #A69B91 - приглушенный серый */
 
-    --accent: 30 41 59; /* #1E293B */
-    --accent-foreground: 147 197 253; /* #93C5FD */
+    --accent: 25 40% 25%; /* #523A2B - темная медь */
+    --accent-foreground: 25 70% 75%; /* #D4A574 - светлая медь */
 
-    /* Семантические цвета для тёмной темы */
-    --destructive: 220 38 38; /* #DC2626 */
-    --destructive-foreground: 254 242 242;
+    /* Семантические цвета для темной темы */
+    --destructive: 0 70% 50%; /* #CC3333 - приглушенный красный */
+    --destructive-foreground: 0 0% 100%;
 
-    --success: 21 128 61; /* #15803D */
-    --success-foreground: 240 253 244;
+    --success: 120 50% 45%; /* #36B852 - приглушенный зеленый */
+    --success-foreground: 0 0% 100%;
 
-    --warning: 217 119 6; /* #D97706 */
-    --warning-foreground: 255 251 235;
+    --warning: 35 80% 55%; /* #DE8C00 - приглушенный оранжевый */
+    --warning-foreground: 0 0% 100%;
 
-    --border: 39 53 71; /* #274357 */
-    --input: 30 41 59; /* #1E293B */
-    --ring: 99 102 241;
+    --border: 220 15% 22%; /* #33394A - темная граница */
+    --input: 220 15% 18%; /* #282D36 - темный инпут */
+    --ring: 25 80% 60%; /* Медная обводка фокуса */
 
-    /* Чат цвета для тёмной темы */
-    --chat-user: 30 58 138; /* #1E3A8A - темно-синий */
-    --chat-bot: 24 33 47; /* #18212F - тёмно-серый */
-    --chat-system: 69 26 3; /* #451A03 - тёмно-коричневый */
+    /* Чат цвета для темной темы */
+    --chat-user: 25 30% 20%; /* #403024 - темно-медный для сообщений */
+    --chat-bot: 220 20% 12%; /* #1A1E26 - темно-серый для бота */
+    --chat-system: 35 25% 18%; /* #3D3426 - темно-коричневый */
 
-    /* Источники для тёмной темы */
-    --source-highlight: 92 53 8; /* #5C3508 */
-    --source-border: 245 158 11;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Источники для темной темы */
+    --source-highlight: 25 40% 20%; /* #473224 - темная медь для выделений */
+    --source-border: 25 80% 60%; /* Яркая медная граница */
+    
+    /* Sidebar для темной темы */
+    --sidebar-background: 220 20% 10%; /* #1A1E26 */
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 25 80% 60%; /* Медный акцент */
+    --sidebar-primary-foreground: 220 15% 8%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 30 30% 80%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 25 80% 60%;
   }
 }
 
